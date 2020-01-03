@@ -13,17 +13,21 @@ public:
     ctohaString(const char*);
     ~ctohaString();
 
-    void clear();
-    void resize();
-    size_t getSize();
-    size_t getCapacity();
+    void    clear();
+    void    reserve(size_t);
+
+    size_t  getSize() const;
+
+    size_t  getCapacity() const;
+    void    setCapacity(size_t);
 
     friend std::ostream& operator<<(std::ostream&, const ctohaString&);
     friend std::istream& operator>>(std::istream&, ctohaString&);
 
 private:
-    static constexpr size_t mnInitCapacity = 255;
-    static constexpr size_t mnInitSize = 0;
+    static const size_t kDefaultSize;
+    static const size_t kDefaultCapacity;
+
 
     size_t  mnSize;
     size_t  mnCapacity;

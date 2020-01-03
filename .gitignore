@@ -3,5 +3,4 @@ myString/myString*
 myString/CMakeCache.txt
 myString/Makefile
 myString/cmake_install.cmake
-.gitignore.swp
 
